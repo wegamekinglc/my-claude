@@ -12,11 +12,14 @@ This repo stores Claude Code and Codex skills and configuration. It is not a tra
 - `.claude/settings.local.json` - Local Claude permissions configuration (auto-allow rules for this machine only).
 - `.codex/skills/` - Custom Codex skills mirrored from the Claude Code skills, adapted only where tool-specific wording or defaults differ.
 - `.codex/settings.local.json` - Mirrored local settings information for Codex-facing reference.
+- `scripts/sync-skills.sh` - Syncs repo-local skills into user-level `~/.claude/skills` and `~/.codex/skills` folders so they are available from any project.
 - `workspace/` - Git-ignored directory for other repos used as workspace context.
 
 ## Skills
 
 Skills are markdown files with frontmatter. The `user-invocable: true` field makes them triggerable via slash command in tools that support user-invocable skills. Skill instructions are written as step-by-step procedures that Codex follows.
+
+Run `scripts/sync-skills.sh` after changing skills to publish them into user-level skill folders.
 
 ## Git conventions
 
