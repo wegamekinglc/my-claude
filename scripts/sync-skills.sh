@@ -84,7 +84,7 @@ sync_skill_tree() {
     fi
 
     local destination="$target_root/$skill_name"
-    local args=(-a --delete)
+    local args=(-a)
     if [[ "$dry_run" -eq 1 ]]; then
       args+=(--dry-run --itemize-changes)
     fi
