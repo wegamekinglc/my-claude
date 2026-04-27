@@ -71,6 +71,14 @@ gh pr view --json number,title,body 2>/dev/null
 
 The base branch is always `main`.
 
+#### PR title conventions
+
+- Keep it under 70 characters.
+- Use imperative mood (e.g., "feat: add rate limiting" not "feat: adds rate limiting").
+- Start with a category prefix — this is mandatory. Choose from: `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`, `test:`, `style:`, `perf:`, `ci:`.
+- Describe the change at a high level, not implementation details.
+- If the PR is still in progress, prefix with `WIP:` (before the category prefix) or open it as a draft.
+
 #### If no PR exists — create one
 
 Analyze all commits on the branch (not just the latest) to write the summary.
