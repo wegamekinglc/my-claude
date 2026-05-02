@@ -9,6 +9,7 @@ Use the root `CLAUDE.md` and `AGENTS.md` as the high-level repo overview.
 ## How To Use These Files
 
 - Use `skills/commit-and-pr/SKILL.md` for "ship it", "commit and PR", "push and create PR", "send this up for review", "wrap this up", or similar commit + push + PR requests.
+- Use `skills/cpp-code-style-review/SKILL.md` to review changed C++ code for project code style, unit test conventions, and documentation consistency.
 - Treat `settings.local.json` as a mirror of the local settings information from `.claude/settings.local.json`; Codex may not consume the Claude permissions schema directly.
 - Run `../scripts/sync-skills.sh` after changing skills to publish `.claude/skills` and `.codex/skills` into user-level skill folders.
 
