@@ -1,6 +1,6 @@
 # my-claude
 
-Custom [Claude Code](https://claude.ai/code) skills and configuration, mirrored for [Codex](https://github.com/openai/codex).
+Custom [Claude Code](https://claude.ai/code) skills and configuration.
 
 ## Skills
 
@@ -27,7 +27,6 @@ Use `./scripts/sync-skills.sh --dry-run` to preview what would be copied.
 ```
 .claude/          Claude Code skills and settings
   skills/           Skill definitions (SKILL.md per skill)
-.codex/           Codex mirror of the same skills and settings
 scripts/          sync-skills.sh — publish skills to user-level folders
 workspace/        Git-ignored scratch space for other repos
 ```

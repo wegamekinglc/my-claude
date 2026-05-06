@@ -5,12 +5,11 @@ usage() {
   cat <<EOF
 Usage: scripts/sync-skills.sh [--dry-run] [--verbose]
 
-Sync repository-local skills into user-level skill folders so they can be used
-from any project.
+Sync repository-local Claude Code skills into the user-level skill folder so they
+can be used from any project.
 
-Sources:
+Source:
   .claude/skills -> ${CLAUDE_HOME:-$HOME/.claude}/skills
-  .codex/skills  -> ${CODEX_HOME:-$HOME/.codex}/skills
 
 Options:
   --dry-run   Show what would be synced without changing files.
@@ -47,7 +46,6 @@ script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 repo_root="$(cd -- "$script_dir/.." && pwd)"
 
 claude_home="${CLAUDE_HOME:-$HOME/.claude}"
-codex_home="${CODEX_HOME:-$HOME/.codex}"
 
 require_rsync() {
   if ! command -v rsync >/dev/null 2>&1; then
@@ -99,4 +97,3 @@ sync_skill_tree() {
 
 require_rsync
 sync_skill_tree "Claude" "$repo_root/.claude/skills" "$claude_home/skills"
-sync_skill_tree "Codex" "$repo_root/.codex/skills" "$codex_home/skills"
